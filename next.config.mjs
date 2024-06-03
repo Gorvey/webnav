@@ -4,9 +4,15 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+
   images: {
-    domains: ['cos.codefe.top', 'image.1874.cool'],
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
 }
 
 export default nextConfig
