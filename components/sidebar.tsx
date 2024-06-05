@@ -1,29 +1,31 @@
 "use client"
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 
-import { cn } from "@/lib/utils"
-import { useEffect, useState } from "react"
 // import { CategoryWithLinks } from "@/app/links";
-import { NavItem } from '@/lib/notion-help'
-import { NotionIcon } from "./notion-icon"
+import { NavItem } from "@/lib/notion-help"
+import { cn } from "@/lib/utils"
+
 import { Icons } from "./icons"
+import { NotionIcon } from "./notion-icon"
 
 export interface SidebarProps {
-  className?: string,
-  navItems: NavItem[],
+  className?: string
+  navItems: NavItem[]
 }
 
 export function Sidebar({ className, navItems }: SidebarProps) {
-  const [activeTabId, setActiveTabId] = useState(navItems[0].id);
+  const [activeTabId, setActiveTabId] = useState(navItems[0].id)
   useEffect(() => {
-    const ele = document.getElementById(activeTabId);
-    const elePosition = (ele?.getBoundingClientRect().top || 0);
-    const offsetPosition = elePosition + window.pageYOffset - 75;
+    const ele = document.getElementById(activeTabId)
+    const elePosition = ele?.getBoundingClientRect().top || 0
+    const offsetPosition = elePosition + window.pageYOffset - 75
     window.scrollTo({
       top: offsetPosition,
-      behavior: "smooth"
-    });
-  }, [activeTabId]);
+      behavior: "smooth",
+    })
+  }, [activeTabId])
   return (
     <nav className="after:h-[calc(100vh - 65px)]  block min-h-screen w-[16rem] flex-row flex-nowrap bg-gray-50 font-semibold sm:bg-background sm:px-6 sm:pb-6">
       {/* <a href="" className="mx-6 hidden h-32 flex-col items-center justify-center sm:flex">
@@ -43,7 +45,11 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                   {navItems.map((category) => {
                     return (
                       <div
-                        className={`block cursor-pointer rounded-lg hover:bg-gray-100 hover:text-purple-500 ${activeTabId === category.id ? "bg-gray-100 text-purple-500" : "text-primary"}`}
+                        className={`block cursor-pointer rounded-lg hover:bg-gray-100 hover:text-blue ${
+                          activeTabId === category.id
+                            ? "bg-gray-100 text-blue"
+                            : "text-primary"
+                        }`}
                         key={category.id}
                         onClick={() => setActiveTabId(category.id)}
                       >
@@ -57,8 +63,11 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                               height={20}
                             />
                           </div> */}
-                          <NotionIcon width={20}
-                            height={20} icon={category.icon}></NotionIcon>
+                          <NotionIcon
+                            width={20}
+                            height={20}
+                            icon={category.icon}
+                          ></NotionIcon>
                           <span className="truncate">{category.name}</span>
                         </div>
                       </div>

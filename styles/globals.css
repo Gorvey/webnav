@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+  --blue: #2454ff;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -78,4 +80,32 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+.link-item-wrap {
+  @apply relative mb-6 flex
+  min-h-[122px] min-w-0 cursor-pointer
+  flex-col break-words rounded-[12px] border border-gray-200  xl:mb-0;
+}
+
+.link-item-wrap::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  inset: -2px;
+  border-radius: 12px;
+  background: radial-gradient(
+    250px circle at var(--x) var(--y),
+    var(--blue) 0,
+    transparent 100%
+  );
+  will-change: background;
+}
+
+.link-item {
+  @apply bg-white p-4 rounded-[12px] absolute z-10 flex-grow w-full h-full
+  transition-[background-opacity] hover:bg-opacity-80
+  dark:bg-gray-900 dark:bg-opacity-80;
 }
