@@ -23,7 +23,7 @@ export function LinkItem({ link }: { link: NavItem }) {
                 />
                 : <span className="h-full w-full rounded-full bg-purple-500 text-center font-bold leading-10">{link.title.slice(0, 1)}</span>
             } */}
-            <NotionIcon icon={link.icon}></NotionIcon>
+            <NotionIcon icon={link.icon} width={40} height={40}></NotionIcon>
           </div>
           <span className="text-xl font-bold text-primary">{link.name}</span>
         </div>
@@ -37,7 +37,7 @@ export function LinkItem({ link }: { link: NavItem }) {
 
 export function LinkContent({ navResources }: { navResources: NavItem[] }) {
   return (
-    <div className="w-full pt-4">
+    <div className="w-full grow pt-4">
       <div className="mx-auto w-full px-4 md:px-6">
         {
           navResources.map((category) => {

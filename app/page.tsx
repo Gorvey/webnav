@@ -12,15 +12,22 @@ export default async function IndexPage() {
   const navResources = await getNavLinks()
   return (
     <div className="container relative mx-auto min-h-screen w-full px-0">
-      <div className="flex">
-        <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
-          <Sidebar navItems={groupData} />
-        </div>
-        <div className="flex-1 sm:pl-[16rem]">
-          <SiteHeader navItems={[]} />
+      {/* <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
+        </div> */}
+      <div className="flex-1 ">
+        <SiteHeader navItems={[]} />
+        <div className="flex">
+          <div className="hidden w-[18rem] shrink-0  sm:block ">
+            <div className="fixed  min-h-screen  transition-all duration-300 ease-in-out">
+              <Sidebar navItems={groupData} />
+
+            </div>
+          </div>
           <LinkContent navResources={groupData} />
-          <SiteFooter />
+
         </div>
+
+        <SiteFooter />
       </div>
     </div>
   )
