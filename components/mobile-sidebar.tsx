@@ -1,13 +1,6 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-05 17:31:57
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-06-05 18:11:18
- * @Description:
- */
 "use client"
 
-import { NavItem } from "@/lib/notion-help"
+import { NavGroup } from "@/lib/notion-help"
 
 // import { CategoryWithLinks, NavItems } from "@/app/links"
 
@@ -15,7 +8,7 @@ import { Sidebar } from "./sidebar"
 
 interface SidebarProps {
   className?: string
-  navItems: NavItem[]
+  navItems: NavGroup[]
   setShowMobileSidebar: Function
 }
 
