@@ -1,10 +1,17 @@
+/*
+ * @Author: zengzhe
+ * @Date: 2024-06-03 16:48:13
+ * @LastEditors: zengzhe
+ * @LastEditTime: 2024-07-09 18:24:44
+ * @Description:
+ */
 "use client"
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
 // import { CategoryWithLinks } from "@/app/links";
-import { NavItem } from "@/lib/notion-help"
+import { NavGroup } from "@/lib/notion-help"
 import { cn } from "@/lib/utils"
 
 import { Icons } from "./icons"
@@ -12,7 +19,7 @@ import { NotionIcon } from "./notion-icon"
 
 export interface SidebarProps {
   className?: string
-  navItems: NavItem[]
+  navItems: NavGroup[]
 }
 
 export function Sidebar({ className, navItems }: SidebarProps) {
@@ -63,11 +70,11 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                               height={20}
                             />
                           </div> */}
-                          <NotionIcon
+                          {/* <NotionIcon
                             width={20}
                             height={20}
                             icon={category.icon}
-                          ></NotionIcon>
+                          ></NotionIcon> */}
                           <span className="truncate">{category.name}</span>
                         </div>
                       </div>

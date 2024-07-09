@@ -2,12 +2,12 @@
  * @Author: zengzhe
  * @Date: 2024-06-03 16:48:13
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-06-16 17:27:09
+ * @LastEditTime: 2024-06-19 10:45:03
  * @Description:
  */
 import { Client } from '@notionhq/client'
 import { toGroupData } from './notion-help'
-import type { PageObjectResponse, GetDatabaseResponse } from "@notionhq/client/build/src/api-endpoints"
+import type { PageObjectResponse, } from "@notionhq/client/build/src/api-endpoints"
 
 const notion = new Client({
   auth: process.env.NOTIONAUTH,
@@ -54,13 +54,20 @@ export const retrieveDataBase = async () => {
   let response = await notion.databases.retrieve({
     database_id: databaseID,
   })
-
-  return response.properties.group
+  if (response.properties.group.type == 'select') {
+    return response.properties.group
+  }
 
 }
 
 export const getGroupData = async () => {
   let groups = await retrieveDataBase()
   let results = await queryDataBaseAllList()
+  if (!groups) {
+    return []
+  }
+  let data = toGroupData(groups, results)
 
+  console.log(data)
+  return data
 }

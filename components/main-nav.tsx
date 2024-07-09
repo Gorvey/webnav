@@ -1,9 +1,11 @@
 "use client"
+
 import * as React from "react"
 import Link from "next/link"
 
 import { NavItem } from "@/types/nav"
 import { cn } from "@/lib/utils"
+
 import { Icons } from "./icons"
 import { MobileSidebar } from "./mobile-sidebar"
 
@@ -13,12 +15,19 @@ interface MainNavProps {
 }
 
 export function MainNav({ items, navItems }: MainNavProps) {
-  const [showMobileSidebar, setShowMobileSidebar] = React.useState<boolean>(false)
+  const [showMobileSidebar, setShowMobileSidebar] =
+    React.useState<boolean>(false)
   return (
     <>
       <div className="flex gap-6 md:gap-10">
-        <div className="sm:hidden" onClick={() => setShowMobileSidebar(!showMobileSidebar)}>
+        <div
+          className="sm:hidden"
+          onClick={() => setShowMobileSidebar(!showMobileSidebar)}
+        >
           <Icons.menu />
+        </div>
+        <div className="text-16 mr-12 hidden font-semibold sm:flex">
+          jscool-发现超cool的前端资源
         </div>
         {items?.length ? (
           <nav className="hidden gap-6 md:flex">
@@ -40,7 +49,12 @@ export function MainNav({ items, navItems }: MainNavProps) {
           </nav>
         ) : null}
       </div>
-      { showMobileSidebar && <MobileSidebar navItems={navItems} setShowMobileSidebar={setShowMobileSidebar} /> }
+      {showMobileSidebar && (
+        <MobileSidebar
+          navItems={navItems}
+          setShowMobileSidebar={setShowMobileSidebar}
+        />
+      )}
     </>
   )
 }

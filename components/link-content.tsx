@@ -2,7 +2,7 @@
  * @Author: zengzhe
  * @Date: 2024-06-05 17:31:57
  * @LastEditors: zengzhe
- * @LastEditTime: 2024-06-05 18:01:14
+ * @LastEditTime: 2024-07-09 18:25:05
  * @Description:
  */
 "use client"
@@ -12,7 +12,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 // import { NavItems } from "@/app/links";
-import { NavItem } from "@/lib/notion-help"
+import { NavGroup, NavItem } from "@/lib/notion-help"
 
 import { NotionIcon } from "./notion-icon"
 
@@ -47,7 +47,7 @@ export function LinkItem({ link }: { link: NavItem }) {
   )
 }
 
-export function LinkContent({ navResources }: { navResources: NavItem[] }) {
+export function LinkContent({ navResources }: { navResources: NavGroup[] }) {
   useEffect(() => {
     // 获取鼠标位置
     const calBoxesPosition = (e: MouseEvent) => {
