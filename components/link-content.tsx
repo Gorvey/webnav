@@ -1,14 +1,7 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-05 17:31:57
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-09 18:25:05
- * @Description:
- */
 "use client"
 
 import { useEffect } from "react"
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
 
 // import { NavItems } from "@/app/links";

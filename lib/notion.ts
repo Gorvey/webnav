@@ -1,10 +1,3 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-03 16:48:13
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-09 20:24:40
- * @Description:
- */
 import { Client } from '@notionhq/client'
 import { toGroupData } from './notion-help'
 import type { PageObjectResponse, QueryDatabaseResponse } from "@notionhq/client/build/src/api-endpoints"

@@ -1,10 +1,3 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-03 16:48:13
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-09 20:12:00
- * @Description:
- */
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
@@ -16,17 +9,14 @@ export const siteConfig = {
       title: "主页",
       href: "/",
     },
+
     {
-      title: '关于',
-      href: '/'
-    },
-    {
-      title: '反馈',
-      href: 'https://github.com/Gorvey/webnav/issues/new'
+      title: '反馈👉',
+      href: 'https://docs.dingtalk.com/notable/share/form/v01meonaA2bLXJmnXxj_uOUtDYe_1roAcBH'
     }
   ],
   links: {
-    blog: "https://zmix.cn",
+    blog: "https://bento.me/gorvey",
     github: "https://github.com/Gorvey"
   },
 }

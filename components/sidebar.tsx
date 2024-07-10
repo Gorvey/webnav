@@ -1,10 +1,3 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-03 16:48:13
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-09 18:24:44
- * @Description:
- */
 "use client"
 
 import { useEffect, useState } from "react"

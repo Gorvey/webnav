@@ -1,10 +1,3 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-05 17:31:57
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-09 18:23:06
- * @Description:
- */
 import { getGroupData } from "@/lib/notion"
 import { LinkContent } from "@/components/link-content"
 import { Sidebar } from "@/components/sidebar"

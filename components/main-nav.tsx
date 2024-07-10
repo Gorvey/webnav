@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 
 import { NavItem } from "@/types/nav"
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 
 import { Icons } from "./icons"
@@ -27,7 +28,7 @@ export function MainNav({ items, navItems }: MainNavProps) {
           <Icons.menu />
         </div>
         <div className="text-16 mr-12 hidden font-semibold sm:flex">
-          jscool-发现超cool的前端资源
+          {siteConfig.name}
         </div>
         {items?.length ? (
           <nav className="hidden gap-6 md:flex">
