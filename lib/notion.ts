@@ -5,7 +5,7 @@ import type { PageObjectResponse, QueryDatabaseResponse } from "@notionhq/client
 const notion = new Client({
   auth: process.env.NOTIONAUTH,
 })
-const databaseID = '031599ced6c84dc7b88a0da1af64c53d'
+const databaseID = process.env.NOTIONDATABASEID || ''
 export const queryDataBaseAllList = async () => {
   let allData = [] as PageObjectResponse[];
   let hasMore = true;
@@ -61,6 +61,5 @@ export const getGroupData = async () => {
   }
   let data = toGroupData(groups, results)
 
-  console.log(data)
   return data
 }

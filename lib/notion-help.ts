@@ -63,8 +63,12 @@ export const toGroupData = (groups: DatabaseObjectResponse['properties']['group'
     }, [])
 
     let current = navGroups.find(v => v.id === result.groupID)
-    current?.children.push(result)
+    if (result.name && result.url) {
+      current?.children.push(result)
+    }
   })
 
-  return navGroups
+  return navGroups.filter(navGroup => {
+    return navGroup.children.length
+  })
 }

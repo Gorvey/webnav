@@ -11,8 +11,8 @@ export const siteConfig = {
     },
 
     {
-      title: '反馈👉',
-      href: 'https://docs.dingtalk.com/notable/share/form/v01meonaA2bLXJmnXxj_uOUtDYe_1roAcBH'
+      title: '意见反馈👉',
+      href: 'https://ysgh2t14be.feishu.cn/share/base/form/shrcnkgQFjdLXDWCYZqgXMdYQsf'
     }
   ],
   links: {
