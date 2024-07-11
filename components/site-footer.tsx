@@ -1,10 +1,3 @@
-/*
- * @Author: zengzhe
- * @Date: 2024-06-03 16:48:13
- * @LastEditors: zengzhe
- * @LastEditTime: 2024-07-11 09:31:16
- * @Description:
- */
 export function SiteFooter() {
   return (
     <div className="relative mx-auto w-full text-sm md:px-6">
