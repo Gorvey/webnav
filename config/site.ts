@@ -15,6 +15,9 @@ export const siteConfig = {
       href: 'https://ysgh2t14be.feishu.cn/share/base/form/shrcnkgQFjdLXDWCYZqgXMdYQsf'
     }
   ],
+  umami: {
+    websiteID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''
+  },
   links: {
     blog: "https://bento.me/gorvey",
     github: "https://github.com/Gorvey"
