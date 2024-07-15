@@ -16,7 +16,9 @@ export const siteConfig = {
     }
   ],
   umami: {
-    websiteID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ''
+    hostUrl: 'https://u.jscool.cn',
+    src: 'https://img.jscool.cn/u-jscool-script.js',
+    websiteID: '23fe9ec4-4998-4358-9235-37379a74424f'
   },
   links: {
     blog: "https://bento.me/gorvey",

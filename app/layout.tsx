@@ -37,8 +37,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {siteConfig.umami.websiteID && (
           <Script
             strategy="lazyOnload"
-            src="https://cloud.umami.is/script.js"
+            src={siteConfig.umami.src}
             data-website-id={siteConfig.umami.websiteID}
+            data-host-url={siteConfig.umami.hostUrl}
           ></Script>
         )}
         <body

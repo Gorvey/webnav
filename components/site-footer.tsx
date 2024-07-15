@@ -18,7 +18,7 @@ export function SiteFooter() {
               </div>
               <div className="mb-2 ml-2 text-center md:mb-0 md:text-left">
                 <a
-                  href="https://us.umami.is/share/QYz4bK4Guzz9wvRZ/jscool.cn"
+                  href="https://u.jscool.cn/share/ous8VHwOt1QlsyDC/jscool.cn"
                   target="_blank"
                   className="text-blueGray-500 py-1 text-center text-sm font-semibold md:text-left"
                   rel="noreferrer"
